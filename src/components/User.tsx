@@ -3,6 +3,7 @@ type TextProps = {
     lastName: string | null
     emailAddres: string | null
     isUsers: boolean
+    isLoading: boolean
 }
 type FuncProps = {
     getFirstName: () => string | void
@@ -13,7 +14,7 @@ type FuncProps = {
 }
 type Props = TextProps & FuncProps
 
-const User: React.FC<Props> = ({getFirstName, getLastName, getEmail, getUserList, addNewUser, name, lastName, emailAddres, isUsers}) => (
+const User: React.FC<Props> = ({getFirstName, getLastName, getEmail, getUserList, addNewUser, name, lastName, emailAddres, isLoading}) => (
     <section className="user-block">
         <div>
             <span className="text user-block__text">New first name:</span> {name ? name : 'XXXXXX'}
@@ -39,9 +40,12 @@ const User: React.FC<Props> = ({getFirstName, getLastName, getEmail, getUserList
                     add new contact 
                 </button>
             }
-            <button className="button user-list-block__button" onClick={getUserList}>
-                get all users
-            </button>
+            {!isLoading ?
+                <button className="button user-list-block__button" onClick={getUserList}>
+                    get all users
+                </button> :
+                <div className="loader user-list-block__loader">Loading...</div>
+            }
         </div>
     </section>
 )

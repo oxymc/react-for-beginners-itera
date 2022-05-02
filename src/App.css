@@ -69,3 +69,8 @@ section {
 .card__email a:hover {
   text-decoration: underline;
 }
+.loader.user-list-block__loader {
+  width: 100%;
+  margin: 1rem;
+  justify-content: center;
+}

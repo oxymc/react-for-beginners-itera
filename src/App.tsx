@@ -9,6 +9,7 @@ function App() {
     const [emailAddres, setEmailAddres] = useState<string | null>('')
     const [isUsers, setIsUsers] = useState<boolean>(false)
     const [users, setUsers] = useState<string[] | any>([])
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const emailCheck: any = (value: string | null) => {
         if(value != null && value.indexOf('@') > -1 && value.indexOf('.') > -1) {
@@ -29,20 +30,26 @@ function App() {
         else alert('Fill all fields')
     }
     
-   const getUsers: any = () => fetch(`https://jsonplaceholder.typicode.com/users`)
-    .then(res => res.json())
-    .then(
-        (result) => setUsers([...users, ...result])
-    )
-    .then(
-        () => setIsUsers(true)
-    )
-    .then(
-        () => scrollToEnd()
-    )
-    .catch((error) => {
-        console.error(error)
-    })
+   const getUsers: any = () => {
+        setIsLoading(true)
+        return fetch(`https://jsonplaceholder.typicode.com/users`)
+            .then(res => res.json())
+            .then(
+                (result) => setUsers([...users, ...result])
+            )
+            .then(
+                () => setIsUsers(true)
+            )
+            .then(
+                () => setIsLoading(false)
+            )
+            .then(
+                () => scrollToEnd()
+            )
+            .catch((error) => {
+                console.error(error)
+            })
+    }
 
     const scrollToEnd = () => {
         setTimeout(
@@ -60,6 +67,7 @@ function App() {
                 lastName={lastName}
                 emailAddres={emailAddres}
                 isUsers={isUsers}
+                isLoading={isLoading}
                 getFirstName={() => setName(prompt("What's your name?"))}
                 getLastName={() => setLastName(prompt("What's your last name?"))}
                 getEmail={() => emailCheck(prompt("What's your email?"))}

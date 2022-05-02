@@ -18,7 +18,7 @@ const UserList: React.FC<Props> = ({isUsers, users}) => (
             isUsers &&
             <section className="user-list-block">
                 {
-                    users.map(el => {return <div key={el.id+uniqid()} className="card user-list-block__card">
+                    users.map(el => {return <div key={uniqid()} className="card user-list-block__card">
                             <div className="card__title">{el.username}</div>
                             <div>{el.name}</div>
                             <div className="card__email">

@@ -4,11 +4,11 @@ import { UserList } from './components/UserList'
 import './App.css'
 
 function App() {
-    const [name, setName] = useState<string | null>('')
-    const [lastName, setLastName] = useState<string | null>('')
-    const [emailAddres, setEmailAddres] = useState<string | null>('')
+    const [name, setName] = useState<string>('')
+    const [lastName, setLastName] = useState<string>('')
+    const [emailAddres, setEmailAddres] = useState<string>('')
     const [isUsers, setIsUsers] = useState<boolean>(false)
-    const [users, setUsers] = useState<string[] | any>([])
+    const [users, setUsers] = useState<any>([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const emailCheck: any = (value: string | null) => {
@@ -20,7 +20,7 @@ function App() {
         }
     }
 
-    const addNewUser: any = (username: string, name: string, email: string) => {
+    const addNewUser = (username: string, name: string, email: string) => {
         if(username && name && email) {
             const obj: object = {username, name, email, id: Date.now()}
             setUsers([...users, obj])
@@ -66,11 +66,10 @@ function App() {
                 name = {name}
                 lastName={lastName}
                 emailAddres={emailAddres}
-                isUsers={isUsers}
                 isLoading={isLoading}
-                getFirstName={() => setName(prompt("What's your name?"))}
-                getLastName={() => setLastName(prompt("What's your last name?"))}
-                getEmail={() => emailCheck(prompt("What's your email?"))}
+                getFirstName={() => setName(prompt("What's your name?") ?? '')}
+                getLastName={() => setLastName(prompt("What's your last name?") ?? '')}
+                getEmail={() => emailCheck(prompt("What's your email?") ?? '')}
                 addNewUser={addNewUser}
                 getUserList={() => getUsers()}
             />

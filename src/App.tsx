@@ -27,7 +27,7 @@ function App() {
             setIsUsers(true)
             scrollToEnd()
         }
-        else alert('Fill all fields')
+        console.log(users.includes('address'))
     }
     
    const getUsers: any = () => {
@@ -67,6 +67,7 @@ function App() {
                 lastName={lastName}
                 emailAddres={emailAddres}
                 isLoading={isLoading}
+                users={users}
                 getFirstName={() => setName(prompt("What's your name?") ?? '')}
                 getLastName={() => setLastName(prompt("What's your last name?") ?? '')}
                 getEmail={() => emailCheck(prompt("What's your email?") ?? '')}

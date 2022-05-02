@@ -18,25 +18,25 @@ const User: React.FC<Props> = ({getFirstName, getLastName, getEmail, getUserList
         <section className="user-block">
             <h3>New user</h3>
             <div>
-                <span className="text user-block__text">first name:</span> {name ? name : 'XXXXXX'}
+                <span className="text user-block__text">first name:</span> {name ? name : '࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰'}
                 <button className="button user-block__button" onClick={getFirstName}>
                     {name ? 'Change' : 'Type'}
                 </button>
             </div>
             <div>
-                <span className="text user-block__text">last name:</span> {lastName ? lastName : 'XXXXXX'}
+                <span className="text user-block__text">last name:</span> {lastName ? lastName : '࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰'}
                 <button className="button user-block__button" onClick={getLastName}>
                     {lastName ? 'Change' : 'Type'}    
                 </button>
             </div>  
             <div>
-                <span className="text user-block__text">email:</span> {emailAddres ? emailAddres : 'XXXXXX'}
+                <span className="text user-block__text">✉ email:</span> {emailAddres ? emailAddres : '࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰'}
                 <button className="button user-block__button" onClick={getEmail}>
                     {emailAddres ? 'Change' : 'Type'}    
                 </button>
             </div>
             <div>
-                {emailAddres && emailAddres !== 'XXXXXX' ?
+                {emailAddres && emailAddres !== '࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰࠰' ?
                     <button className="button user-block__button_direction-center" onClick={() => addNewUser(name ?? '', lastName ?? '', emailAddres ?? '')}>
                         add new contact 
                     </button> :

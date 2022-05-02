@@ -22,7 +22,7 @@ const UserList: React.FC<Props> = ({isUsers, users}) => (
                             <div className="card__title">{el.username}</div>
                             <div>{el.name}</div>
                             <div className="card__email">
-                                <a rel="noreferrer" target="_blank" href={`mailto:${el.email}`} >{el.email}</a>
+                                <a rel="noreferrer" target="_blank" href={`mailto:${el.email}`} >✉ {el.email}</a>
                             </div>
                         </div>
                         }

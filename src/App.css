@@ -1,7 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+body, html {
+  overflow-x: hidden;
+}
 .App {
   text-align: center;
 }
-.test-block {
+#root {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -11,11 +17,20 @@
   font-size: calc(10px + 2vmin);
   color: #fff;
 }
-.test-block div {
+section {
+  border-radius: 4px;
+}
+.user-block {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+.user-block div {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 .button { 
+  margin: 1rem auto;
   background-color: transparent;
   border: 1px solid;
   color: #fff;
@@ -26,9 +41,31 @@
 .button:hover {
   background-color: #000;
 }
-.text.test-block__text {
+.text.user-block__text {
   margin-right: 1rem;
 }
-.button.test-block__button {
+.button.user-block__button {
   margin: 1rem;
+  margin-right: 0;
+}
+.user-list-block {
+  background: #fff;
+  color: #000;
+  margin: 1rem;
+  max-width: 760px;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+.card__title {
+  font-weight: bold;
+}
+.card__email a {
+  color: steelblue;
+  text-decoration: none;
+}
+.card__email a:hover {
+  text-decoration: underline;
 }

@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-for-beginners-itera/static/css/main.8803b908.css",
-    "main.js": "/react-for-beginners-itera/static/js/main.826561fa.js",
+    "main.css": "/react-for-beginners-itera/static/css/main.e05f0b5b.css",
+    "main.js": "/react-for-beginners-itera/static/js/main.b7746e40.js",
     "static/js/787.9f3e8082.chunk.js": "/react-for-beginners-itera/static/js/787.9f3e8082.chunk.js",
     "index.html": "/react-for-beginners-itera/index.html",
-    "main.8803b908.css.map": "/react-for-beginners-itera/static/css/main.8803b908.css.map",
-    "main.826561fa.js.map": "/react-for-beginners-itera/static/js/main.826561fa.js.map",
+    "main.e05f0b5b.css.map": "/react-for-beginners-itera/static/css/main.e05f0b5b.css.map",
+    "main.b7746e40.js.map": "/react-for-beginners-itera/static/js/main.b7746e40.js.map",
     "787.9f3e8082.chunk.js.map": "/react-for-beginners-itera/static/js/787.9f3e8082.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8803b908.css",
-    "static/js/main.826561fa.js"
+    "static/css/main.e05f0b5b.css",
+    "static/js/main.b7746e40.js"
   ]
 }

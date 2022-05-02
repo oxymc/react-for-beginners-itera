@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-for-beginners-itera/static/css/main.ff150707.css",
+    "main.css": "/react-for-beginners-itera/static/css/main.68ba978d.css",
     "main.js": "/react-for-beginners-itera/static/js/main.c2983b9a.js",
     "static/js/787.9f3e8082.chunk.js": "/react-for-beginners-itera/static/js/787.9f3e8082.chunk.js",
     "index.html": "/react-for-beginners-itera/index.html",
-    "main.ff150707.css.map": "/react-for-beginners-itera/static/css/main.ff150707.css.map",
+    "main.68ba978d.css.map": "/react-for-beginners-itera/static/css/main.68ba978d.css.map",
     "main.c2983b9a.js.map": "/react-for-beginners-itera/static/js/main.c2983b9a.js.map",
     "787.9f3e8082.chunk.js.map": "/react-for-beginners-itera/static/js/787.9f3e8082.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff150707.css",
+    "static/css/main.68ba978d.css",
     "static/js/main.c2983b9a.js"
   ]
 }

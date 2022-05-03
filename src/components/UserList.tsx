@@ -1,11 +1,11 @@
 const uniqid = require('uniqid')
+
 type User = {
     id?: string
     username?: string
     name?: string
     email?: string
 }
-
 type stateProps = {
     isUsers: boolean
     users: User[]

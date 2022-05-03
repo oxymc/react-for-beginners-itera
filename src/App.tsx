@@ -11,7 +11,7 @@ function App() {
     const [users, setUsers] = useState<any>([])
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
-    const emailCheck: any = (value: string | null) => {
+    const emailCheck: any = (value: string) => {
         if(value != null && value.indexOf('@') > -1 && value.indexOf('.') > -1) {
             setEmailAddres(value)
         }
@@ -27,28 +27,20 @@ function App() {
             setIsUsers(true)
             scrollToEnd()
         }
-        console.log(users.includes('address'))
     }
     
-   const getUsers: any = () => {
+   const getUsers: any = async () => {
         setIsLoading(true)
-        return fetch(`https://jsonplaceholder.typicode.com/users`)
-            .then(res => res.json())
-            .then(
-                (result) => setUsers([...users, ...result])
-            )
-            .then(
-                () => setIsUsers(true)
-            )
-            .then(
-                () => setIsLoading(false)
-            )
-            .then(
-                () => scrollToEnd()
-            )
-            .catch((error) => {
-                console.error(error)
-            })
+        try {
+           const res = await fetch(`https://jsonplaceholder.typicode.com/users`)
+           const result = await res.json()
+           setUsers([...users, ...result])
+           setIsUsers(true)
+           setIsLoading(false)
+           return scrollToEnd()
+       } catch (error) {
+           console.error(error)
+       }
     }
 
     const scrollToEnd = () => {
